@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Isaias">
+    <meta name="description" content="ANM Coding Assesment">
+    <title>ANM Assesment</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/main.css">
+
+</head>
+<body>
+
+
+    <div class="mi-container">
+
+        <h3>Search History</h3>
+        <ul id="search-history"></ul>
+        <form id="search-form">
+            <input type="text" name="place" id="place">
+            <input type="submit" value="search">
+        </form>
+
+        <div id="map"></div>
+
+    </div>
+
+    <!-- JS -->
+    <script src="/index.js"></script>
+
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap&v=weekly"
+      defer
+    ></script>
+
+</body>
+</html>
