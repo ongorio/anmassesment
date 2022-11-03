@@ -11,28 +11,54 @@
     <!-- CSS -->
     <link rel="stylesheet" href="/main.css">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
+
 </head>
 <body>
-
-
     <div class="mi-container">
 
-        <h3>Search History</h3>
+        <!-- Search History List -->
+        <div class="d-flex">
+            <h2>Previous Searches</h2>
+            <small class="ml-auto" id="shortcut">To clear: <em>ctrl + alt + a</em></small>
+        </div>
         <ul id="search-history"></ul>
-        <form id="search-form">
-            <input type="text" name="place" id="place">
-            <input type="submit" value="search">
-        </form>
 
-        <div id="map"></div>
 
+        <div class="form-bg">
+            
+            <!-- Place Form -->
+            <form id="search-form" class="mi-container">
+                <label for="">Search</label>
+                <div id="form-data">
+                    <input type="text" class="text-field" name="place" id="placeField" placeholder="Place to Search">
+                    <button type="submit" id="submitbtn">Search</button>
+                </div>
+            </form>
+
+            <!-- Map -->
+            <div id="map"></div>
+        </div>
+
+        <!-- Top 10 Earquakes list -->
+        <div id="top10">
+            <hr>
+            <h3>Top 10 Strongest Earthquake last 12 months</h3>
+            <ul id="top-earthquakes"></ul>
+        </div>
+
+        <!-- Loadin tag -->
+        <p style="display: none; text-align: center; margin-top: 3rem;" id="loadin">Loadin'....</p>
+            
     </div>
 
     <!-- JS -->
     <script src="/index.js"></script>
 
     <script
-      src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap&v=weekly"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBR-v77y7zsydDxDhmfjOl9i18qwGv6fPs&callback=initMap&v=weekly"
       defer
     ></script>
 

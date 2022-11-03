@@ -1,7 +1,15 @@
+/*
+Author: Isaias Alvarez
+*/
+
 body{
     margin: 0;
     min-height: 100vh;
-    padding: 2%;
+    /* padding: 2%; */
+    background-color: #C5C3C6;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
 }
 
 .mi-container{
@@ -11,4 +19,127 @@ body{
 
 #map {
     height: 300px;
-  }
+}
+
+
+/* Form */
+.form-bg{
+    background-color: #dcdcdd;
+    border-radius: 1rem;
+    box-shadow: 0rem 0.5rem 2rem 0rem black;
+    margin-top: 5%;
+
+}
+
+form{
+    padding: 2%;
+    margin-bottom: 1rem;
+}
+
+label{
+    margin-bottom: 1rem;
+}
+
+#placeField{
+    border: #46494c solid 2px;
+    padding: 0.5rem;
+    width: 75%;
+}
+
+#submitbtn{
+    border: #46494c solid 2px;
+    padding: 0.5rem;
+    cursor: pointer;
+    width: auto;
+}
+
+#submitbtn:hover{
+    border: #dcdcdc solid 2px;
+    background-color: #1985a1;
+    color: #dcdcdd;
+}
+
+#submitbtn:active{
+    border: #C5C3C6 solid 4px;
+
+}
+
+/* List Styles */
+ul{
+    list-style: none;
+    padding: 0;
+    border: #46494c solid 2px;
+}
+
+
+ul li{
+    background-color: #dcdcdd;
+    border-bottom: #46494c solid 2px;
+    padding: 0.5rem;
+}
+
+ul li:hover{
+    cursor: pointer;
+    background-color: #1985a1;
+    color: #dcdcdc;
+}
+
+ul li:active{
+    color: #dcdcdd;
+    border: #dcdcdd solid 5px;
+}
+
+placeholder {
+    color:#C5C3C6;
+    color: #46494c;
+    color: #4c5c68;
+    color: #1985a1;
+    color: #dcdcdd
+}
+
+.d-flex{
+    display: flex;
+    align-items: center;
+}
+
+.ml-auto{
+    margin-left: auto;
+    margin-right: 0;
+}
+
+
+#top10{
+    margin-top: 3rem;
+}
+
+@media only screen and (max-width: 1024px){
+    h2{
+        text-align: center;
+    }
+    ul li{
+        text-align: center;
+    }
+    form{
+        text-align: center;
+        
+    }
+
+    #shortcut{
+        display: none;
+    }
+
+
+    #placeField{
+        border: #46494c solid 2px;
+        padding: 0.5rem;
+        width: 90%;
+    }
+
+
+
+    #submitbtn{
+        margin-top: 0.5rem;
+        width: 100%;
+    }
+    
+}
