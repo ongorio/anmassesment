@@ -74,10 +74,7 @@ function getCoords(address){
 
             // Send request to geonames
             let url = `http://api.geonames.org/earthquakesJSON?north=${lat+0.3}&south=${lat-0.3}&east=${lng+0.3}&west=${lng-0.3}&username=ongorio`
-            const response = await fetch(url,{
-                referrerPolicy: 'unsafe-url',
-                // mode: 'no-cors'
-            })
+            const response = await fetch(url)
             const data = await response.json();
            
 
@@ -229,11 +226,7 @@ async function getTopEartquakes(){
 
     let url = `http://api.geonames.org/earthquakesJSON?north=89&south=-89&east=-100&west=100&date=${today.getFullYear()}-${today.getMonth()}-${today.getDay()}&minMagnitude=6&maxRows=200&username=ongorio`
     // let url = `http://api.geonames.org/earthquakesJSON?north=4&south=-9.9&east=-22.4&west=55.2&date=${today.getFullYear()}-${today.getMonth()}-${today.getDay()}&minMagnitude=6&maxRows=200&username=ongorio`
-    const response = await fetch(url,{
-        // referrerPolicy:"unsafe_url",
-        referrerPolicy: 'unsafe-url',
-        // mode: 'no-cors'
-    });
+    const response = await fetch(url);
     const data = await response.json();
 
     let records = data.earthquakes;
